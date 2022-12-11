@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Valentina Coppola</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper-->
+	<div id="wrapper">
+
+		<!-- Nav -->
+		<nav id="nav">
+			<a href="index.html" class="icon solid fa-home"><span>Home</span></a>
+			<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
+			<a href="#contact" class="icon solid fa-envelope"><span>Contacto</span></a>
+			<a href="https://www.instagram.com/valencoppola/" target="_blank" class="icon brands fa-instagram"><span>Instagram</span></a>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Me -->
+			<article id="home" class="panel intro">
+				<header>
+					<h1>Valentina Coppola</h1>
+					<p>Professional multi-brand model</p>
+				</header>
+				<a href="#work" class="jumplink pic">
+					<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+					<img src="images/32.jpeg" alt="" />
+				</a>
+			</article>
+
+			<!-- Work -->
+
+
+			<article id="work" class="panel">
+				<header>
+					<h2>Work</h2>
+				</header>
+				<p>
+					Hi! My name is Valentina, I'm from Argentina and I'm currently living in Buenos Aires. I am very excited to work with you. Don't hesitate to contact me. We'll be in touch!
+				</p>
+				<section>
+					<div class="row">
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="/images/39.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/29.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/12.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/13.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/14.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/15.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/16.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/23.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/24.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/25.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/28.jpeg" alt="">
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<img class="image fit" src="images/31.jpeg" alt="">
+						</div>
+					</div>
+				</section>
+			</article>
+
+			<script>
+				// lightbox
+
+				const lightbox = document.createElement('div')
+				lightbox.id = 'lightbox'
+				document.body.appendChild(lightbox)
+
+				const images = document.querySelectorAll('img')
+				images.forEach(image => {
+					image.addEventListener('click', e => {
+						lightbox.classList.add('active')
+						const img = document.createElement('img')
+						img.src = image.src
+						while (lightbox.firstChild) {
+							lightbox.removeChild(lightbox.firstChild)
+						}
+						lightbox.appendChild(img)
+					});
+				});
+
+				lightbox.addEventListener('click', e => {
+					if (e.target !== e.currentTarget) return
+					lightbox.classList.remove('active')
+				});
+			</script>
+
+			<!-- Contacto -->
+
+			<article id="contact" class="panel">
+				<header>
+					<h2>Let's get in Touch!</h2>
+				</header>
+				<form  action="https://submit-form.com/6FRFU1kO" >
+					<div>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<input type="text" name="name" placeholder="Nombre/Name" required="true" />
+							</div>
+							<div class="col-6 col-12-medium">
+								<input type="text" name="email" placeholder="Email" required="true" />
+							</div>
+							<div class="col-12">
+								<input type="text" name="subject" placeholder="Asunto/Subject" required="true" />
+							</div>
+							<div class="col-12">
+								<textarea name="message" placeholder="Mensaje/Message" rows="6" required="true"></textarea>
+							</div>
+							<div class="col-12">
+								<button type="submit" value="Enviar" >Enviar Formulario</button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+				<?php
+				//include ("email.php");
+				?>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<ul class="copyright">
+				<li>&copy; Valentina Coppola.</li>
+				<li>Diseñado con &#x2661 por: <a href="https://carlosibarrola.github.io/portfolio/" target="_blank">Charly</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
